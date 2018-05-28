@@ -1,2 +1,2 @@
-# lagvae
-Lagrangian VAE
+# Lagrangian VAE
+
