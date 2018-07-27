@@ -1,5 +1,19 @@
 # Lagrangian VAE
 
+TensorFlow implementation for reproducing the experiments in [A Lagrangian Perspective of Latent Variable Generative Models](https://arxiv.org/abs/1806.06514), UAI 2018 Oral.
+
+by [Shengjia Zhao](http://szhao.me), [Jiaming Song](http://tsong.me) and [Stefano Ermon](http://cs.stanford.edu/~ermon), Stanford Artificial Intelligence Laboratory
+
+In this paper, we generalize the objective of latent variable generative models to two targets:
+- Primal Problem: "mutual information objectives", such as maximizing / minimizing mutual information between observations and latent variables.
+- Constraints: "consistency", which ensures that the model posterior is close to the amortized posterior.
+
+**Lagrangian VAE** provides a practical way to find the best trade-off between "consistency constraints" and "mutual information objectives", as opposed of performing extensive hyperparameter tuning. We demonstrate an example over **InfoVAE**, a latent variable generative model objective that requires tuning the strengths of corresponding hyperparameters.
+
+As demonstrated in the following figure, LagVAE manages to find a near Pareto-optimal curve for the trade-off between mutual informtation and consistency.
+
+[](fig/lagvae.png)
+
 ## Requirements
 
 - click 
@@ -37,3 +51,6 @@ If you find the idea or code useful for your research, please consider citing ou
 ## Acknowledgements
 
 `utils/logger.py` is based on an implementation in [OpenAI Baselines](https://github.com/openai/baselines).
+
+## Contact
+`tsong [at] cs [dot] stanford [dot] edu`
